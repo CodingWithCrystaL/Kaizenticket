@@ -1,4 +1,4 @@
-// ✅ Dior $elling Tickets — FINAL BOT with all features
+// ✅ Kaizen $elling Tickets — FINAL BOT with all features
 
 const {
   Client, GatewayIntentBits, Partials, ChannelType, PermissionsBitField,
@@ -27,7 +27,7 @@ const IMAGE_URL = "https://raw.githubusercontent.com/CodingWithCrystaL/Exchange/
 
 client.once("ready", async () => {
   console.log(`✅ Logged in as ${client.user.tag}`);
-  client.user.setActivity("Tickets For Dior $elling", { type: 3 });
+  client.user.setActivity("Tickets For Kaizen $elling", { type: 3 });
 
   const commands = [
     new SlashCommandBuilder().setName("sendpanel").setDescription("Send the main ticket creation panel"),
@@ -55,7 +55,7 @@ client.on(Events.InteractionCreate, async interaction => {
         .setDescription("To create a ticket, click the button below!")
         .setColor("#FFFFFF")
         .setImage(IMAGE_URL)
-        .setFooter({ text: "Dior $elling" });
+        .setFooter({ text: "Kaizen $elling" });
 
       const row = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setCustomId("ticket-panel-button").setLabel("Create Ticket").setStyle(ButtonStyle.Primary)
@@ -85,7 +85,7 @@ client.on(Events.InteractionCreate, async interaction => {
         .setDescription("Select a category below to open a ticket.")
         .setColor("#FFFFFF")
         .setImage(IMAGE_URL)
-        .setFooter({ text: "Dior $elling" });
+        .setFooter({ text: "Kaizen $elling" });
 
       await interaction.reply({ ephemeral: true, embeds: [embed], components: [menu] });
     }
@@ -191,7 +191,7 @@ client.on(Events.InteractionCreate, async interaction => {
       )
       .setColor("#FFFFFF")
       .setImage(IMAGE_URL)
-      .setFooter({ text: "Dior $elling" });
+      .setFooter({ text: "Kaizen $elling" });
 
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder().setCustomId("confirm-close").setLabel("❌ Close Ticket").setStyle(ButtonStyle.Danger),
